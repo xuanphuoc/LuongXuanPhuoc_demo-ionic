@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      About
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="img-header">
+    <img src="assets/icon/ionic-logo-white.svg">
+  </div>
+  <div class="about-list">
+    <h3>Conference-app</h3>
+    <p>Edited by: XP</p>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat = "MMM DD,YYYY" max = "2017" [(ngModel)]="conferenceDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="pin"></ion-icon>
+        <ion-label>Adress</ion-label>
+        <ion-select>
+          <ion-option value = "TT" selected>Thường Tín,Hà Nội</ion-option>
+          <ion-option value = "HN">Lê Thanh Nghị,Hà Nội</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <p>
+    -Ionic is the beautiful, free and open source mobile SDK for developing native and progressive web apps with ease.<br>
+    -Build apps with web tech you know and love<br>
+    -One code base Running everywhere.
+  </p>
+  </div>
+  
+</ion-content>
